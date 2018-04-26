@@ -8,7 +8,8 @@ async function test () {
 
   // console.log(`Nickname: ${player.data[0].attributes.name}`)
   // console.log(await pubg.telemetry.url('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3'))
-  console.log(await pubg.match.players('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3'))
+  let players = await pubg.match.players.data('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
+  console.log(players[0].attributes.stats)
 }
 
 test()
