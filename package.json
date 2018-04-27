@@ -1,8 +1,30 @@
 {
-  "name": "pubg-js",
+  "name": "pubg",
+  "version": "1.0.0",
+  "description": "in development",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
     "atob": "^2.1.0",
     "lodash": "^4.17.10",
+    "lr-http-server": "^0.1.5",
     "request": "^2.85.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lr-http-server --port 4200"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoquinalha/pubg-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoquinalha/pubg-js/issues"
+  },
+  "homepage": "https://github.com/gustavoquinalha/pubg-js#readme"
 }
