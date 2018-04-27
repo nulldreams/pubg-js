@@ -8,8 +8,15 @@ async function test () {
 
   // console.log(`Nickname: ${player.data[0].attributes.name}`)
   // console.log(await pubg.telemetry.url('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3'))
-  let players = await pubg.match.players.data('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
-  console.log(players[0].attributes.stats)
+  // let resultado = await pubg.telemetry.url('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
+  // let players = await pubg.players.info('pc-na', 'igor-martins')
+  let search = {
+    node: 'included',
+    query: { name: 'igor-martins' }
+  }
+  
+  let resultado = await pubg.match.players.find('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3', search)
+  console.log(resultado)
 }
 
 test()
