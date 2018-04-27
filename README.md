@@ -26,17 +26,17 @@ let winner = await pubg.match.winner.player('pc-na', 'b9281965-4a12-487b-a544-a3
 console.log(winner)
 ```
 ```json
-{ data:
-   [ { type: 'participant',
-       id: '3fe34769-7023-4019-a5c7-b55ef26ec96c',
+{ 'data':
+   [ { 'type': 'participant',
+       'id': '3fe34769-7023-4019-a5c7-b55ef26ec96c',
+       'attributes': [Object] },
+     { 'type': 'participant',
+       'id': '010d0fbe-6e13-435a-94a9-59db6245af3f',
        attributes: [Object] },
-     { type: 'participant',
-       id: '010d0fbe-6e13-435a-94a9-59db6245af3f',
-       attributes: [Object] },
-     { type: 'participant',
-       id: '9eb4435f-7c99-4dea-8845-89415b8cf1f5',
-       attributes: [Object] } ],
-  names: [ 'Uzuzy', 'The_Fake998', 'Phi_Senpai' ] }
+     { 'type': 'participant',
+       'id': '9eb4435f-7c99-4dea-8845-89415b8cf1f5',
+       'attributes': [Object] } ],
+  'names': [ 'Uzuzy', 'The_Fake998', 'Phi_Senpai' ] }
 ```
 #### `pubg.match.winner.team(region, matchID)`
 ```javascript
@@ -44,10 +44,10 @@ let winner = await pubg.match.winner.team('pc-na', 'b9281965-4a12-487b-a544-a3c3
 console.log(winner)
 ```
 ```json
-[ { type: 'roster',
-    id: 'a990d773-a145-43a6-ad37-34aa8a8dd267',
-    attributes: { stats: [Object], won: 'true', shardId: 'pc-na' },
-    relationships: { team: [Object], participants: [Object] } } ]
+[ { 'type': 'roster',
+  'id': 'a990d773-a145-43a6-ad37-34aa8a8dd267',
+  'attributes': { 'stats': [Object], 'won': 'true', 'shardId': 'pc-na' },
+  'relationships': { 'team': [Object], 'participants': [Object] } } ]
 ```
 
 #### in development...
