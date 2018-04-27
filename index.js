@@ -24,9 +24,11 @@ async function test () {
   //     if (v.type === 'participant') { return v.attributes.stats.winPlace < 2 }
   //   }
   // }
+  let result = await pubg.match.players.mostKills('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
+  console.log(result)
   // let players = []
-  let winner = await pubg.match.winner.team('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
-  console.log(winner)
+  // let winner = await pubg.match.winner.team('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
+  // console.log(winner)
   // resultado.forEach(element => {
   //   players.push()
   // })

@@ -50,6 +50,87 @@ console.log(winner)
   "relationships": { "team": [Object], "participants": [Object] } } ]
 
 ```
+#### `pubg.match.winner.players.find(region, matchID, queryObject)`
+```javascript
+let search = {
+    node: 'included',
+    query: function (v) {
+      if (v.type === 'participant') { return v.attributes.stats.winPlace < 2 }
+    }
+}
+let result = await pubg.match.players.find('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3', search)
+console.log(result)
+```
+```json
+[ { type: 'participant',
+    id: '3fe34769-7023-4019-a5c7-b55ef26ec96c',
+    attributes: { stats: [Object], actor: '', shardId: 'pc-na' } },
+  { type: 'participant',
+    id: '010d0fbe-6e13-435a-94a9-59db6245af3f',
+    attributes: { stats: [Object], actor: '', shardId: 'pc-na' } },
+  { type: 'participant',
+    id: '9eb4435f-7c99-4dea-8845-89415b8cf1f5',
+    attributes: { shardId: 'pc-na', stats: [Object], actor: '' } } ]
+```
+```javascript
+let search = {
+    node: 'included',
+    query: [ 'attributes.stats.killPointsDelta', 10.2518635 ]
+}
+let result = await pubg.match.players.find('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3', search)
+console.log(result)
+```
+```json
+[ { type: 'participant',
+    id: '5a4f8d7f-aac4-4edc-bd4c-411452a95368',
+    attributes: { stats: [Object], actor: '', shardId: 'pc-na' } } ]
+```
+#### `pubg.match.players.mostKills(region, matchID)`
+```javascript
+let result = await pubg.match.players.mostKills('pc-na', 'b9281965-4a12-487b-a544-a3c3b58faba3')
+console.log(result)
+```
+```json
+{
+  "type": "participant",
+  "id": "abc02c17-12f2-4539-b1c8-1b93eb395b74",
+  "attributes": {
+    "actor": "",
+    "shardId": "pc-na",
+    "stats": {
+      "DBNOs": 11,
+      "assists": 1,
+      "boosts": 6,
+      "damageDealt": 1302.44922,
+      "deathType": "byplayer",
+      "headshotKills": 3,
+      "heals": 4,
+      "killPlace": 1,
+      "killPoints": 1385,
+      "killPointsDelta": 73.64062,
+      "killStreaks": 0,
+      "kills": 12,
+      "lastKillPoints": 0,
+      "lastWinPoints": 0,
+      "longestKill": 130,
+      "mostDamage": 0,
+      "name": "Reign92",
+      "playerId": "account.808f7b385979435ca3ba545737fbf741",
+      "revives": 2,
+      "rideDistance": 1663.605,
+      "roadKills": 0,
+      "teamKills": 0,
+      "timeSurvived": 1770,
+      "vehicleDestroys": 0,
+      "walkDistance": 3352.25146,
+      "weaponsAcquired": 0,
+      "winPlace": 3,
+      "winPoints": 1248,
+      "winPointsDelta": 29.028574
+    }
+  }
+}
+```
 
 #### in development...
 
