@@ -62,15 +62,23 @@ let result = await pubg.match.players.find('pc-na', 'b9281965-4a12-487b-a544-a3c
 console.log(result)
 ```
 ```json
-[ { type: 'participant',
-    id: '3fe34769-7023-4019-a5c7-b55ef26ec96c',
-    attributes: { stats: [Object], actor: '', shardId: 'pc-na' } },
-  { type: 'participant',
-    id: '010d0fbe-6e13-435a-94a9-59db6245af3f',
-    attributes: { stats: [Object], actor: '', shardId: 'pc-na' } },
-  { type: 'participant',
-    id: '9eb4435f-7c99-4dea-8845-89415b8cf1f5',
-    attributes: { shardId: 'pc-na', stats: [Object], actor: '' } } ]
+[
+  {
+    "type": "participant",
+    "id": "3fe34769-7023-4019-a5c7-b55ef26ec96c",
+    "attributes": { "stats": ["Object"], "actor": "", "shardId": "pc-na" }
+  },
+  {
+    "type": "participant",
+    "id": "010d0fbe-6e13-435a-94a9-59db6245af3f",
+    "attributes": { "stats": ["Object"], "actor": "", "shardId": "pc-na" }
+  },
+  {
+    "type": "participant",
+    "id": "9eb4435f-7c99-4dea-8845-89415b8cf1f5",
+    "attributes": { "shardId": "pc-na", "stats": ["Object"], "actor": "" }
+  }
+]
 ```
 ```javascript
 let search = {
@@ -81,9 +89,13 @@ let result = await pubg.match.players.find('pc-na', 'b9281965-4a12-487b-a544-a3c
 console.log(result)
 ```
 ```json
-[ { type: 'participant',
-    id: '5a4f8d7f-aac4-4edc-bd4c-411452a95368',
-    attributes: { stats: [Object], actor: '', shardId: 'pc-na' } } ]
+[
+  {
+    "type": "participant",
+    "id": "5a4f8d7f-aac4-4edc-bd4c-411452a95368",
+    "attributes": { "stats": ["Object"], "actor": "", "shardId": "pc-na" }
+  }
+]
 ```
 #### `pubg.match.players.mostKills(region, matchID)`
 ```javascript
